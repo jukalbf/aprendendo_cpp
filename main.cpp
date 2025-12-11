@@ -36,6 +36,8 @@ int main() {
 
   std::cout << "\n\n====== Structs ======" << std::endl;
   struct Pessoa pessoa = {"Maria", 27, "398.235.583-91"};
+  // Pode também ser instanciado assim:
+  // Pessoa pessoa = new Pessoa;
 
   std::cout << "Chamando atributos do struct:\n";
   std::cout << "\tNome: " << pessoa.nome << std::endl;
