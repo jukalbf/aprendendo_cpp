@@ -44,15 +44,15 @@ int main() {
   std::cout << "\tIdade: " << pessoa.idade << std::endl;
   std::cout << "\tCPF: " << pessoa.cpf << std::endl;
 
-  struct Pessoa *ptr = &pessoa;
+  std::string *ptr = &pessoa.nome;
 
   std::cout << "\n\nMostrando tamanho da variável: " << sizeof(pessoa) << std::endl;
   std::cout << "\nVendo tamanho do ponteiro que aponta pra pessoa: " << sizeof(ptr) << std::endl;
 
-  ptr->nome = "Rafaela";
-  changeName(ptr->nome, "Gabriela");
+  *ptr = "Rafaela";
+  changeName(ptr, "Gabriela");
 
-  std::cout << "\nNovo valor de pessoa: " << ptr->nome << std::endl;
+  std::cout << "\nNovo valor de pessoa: " << *ptr << std::endl;
 
   return 0;
 }
